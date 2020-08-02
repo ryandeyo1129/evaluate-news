@@ -5,6 +5,8 @@ function handleSubmit(event) {
     let formText = document.getElementById('name').value
     checkForName(formText)
 
+    console.log('main dist test');
+
     console.log("::: Form Submitted :::")
     fetch('http://localhost:8080/test')
     .then(res => res.json())
