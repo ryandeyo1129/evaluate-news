@@ -22,6 +22,13 @@ function handleSubmit(event) {
         }
       })
     }
+    postData("http://localhost:8081/add", { userData: 'Well that went badly.' })
+    .then(res => {
+      console.log(res);
+    })
+    // console.log(postData("http://localhost:8081/add", { userData: 'the ball is red.' }));
+
+    // console.log(dataPromise('the /ball is red.'));
 }
 
 const postData = async (url = 'http://localhost:8081/add', data = {}) => {
@@ -42,4 +49,9 @@ const postData = async (url = 'http://localhost:8081/add', data = {}) => {
   }
 }
 
-export { handleSubmit, postData }
+const dataPromise = async (input) => await postData("http://localhost:8081/add", { userData: input })
+.then(res => {
+  return res;
+})
+
+export { handleSubmit, postData, dataPromise }
