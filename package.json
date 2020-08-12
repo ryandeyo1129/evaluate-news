@@ -3,26 +3,40 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "node src/server/index.js",
     "build-prod": "webpack --config webpack.prod.js",
-    "build-dev": "webpack-dev-server  --config webpack.dev.js --open"
+    "build-dev": "webpack-dev-server --config webpack.dev.js --open --watch --info-verbosity verbose"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "webpack": "^4.35.3",
-    "webpack-cli": "^3.3.5"
+    "jest": "^26.3.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "workbox-webpack-plugin": "^5.1.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.4",
-    "@babel/preset-env": "^7.5.4",
-    "babel-loader": "^8.0.6",
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.1.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
     "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^4.2.1",
     "html-webpack-plugin": "^3.2.0",
-    "webpack-dev-server": "^3.7.2"
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "sass-loader": "^9.0.3",
+    "style-loader": "^1.2.1",
+    "terser-webpack-plugin": "^4.1.0",
+    "webpack-dev-server": "^3.11.0"
   }
 }

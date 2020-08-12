@@ -1,16 +1,9 @@
 function checkForName(inputText) {
-    console.log("::: Running checkForName :::", inputText);
-    let names = [
-        "Picard",
-        "Janeway",
-        "Kirk",
-        "Archer",
-        "Georgiou"
-    ]
-
-    if(names.includes(inputText)) {
-        alert("Welcome, Captain!")
-    }
+  if (inputText.length > 0) {
+    console.log('validated');
+  } else {
+    console.log('not valid, enter a complete sentence');
+  }
 }
 
 export { checkForName }
