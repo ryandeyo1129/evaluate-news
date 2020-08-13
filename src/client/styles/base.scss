@@ -1,14 +1,23 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: #009;
+
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font: 100% $font-stack;
+  color: $primary-color;
 }
 
 main {
-    flex: 2;
+  flex: 2;
+
+  section {
+    border: 5px solid red;
+  }
 }
 
 section {
-    max-width: 800px;
-    margin: 50px auto;
+  max-width: 800px;
+  margin: 50px auto;
 }

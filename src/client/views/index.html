@@ -8,15 +8,13 @@
     <body>
 
         <header>
-            <div class="">
-                Logo
-            </div>
-            <div class="">
-                navigation
+            <div class="logo">
+              <h1>Sentiment Analysis</h1>
             </div>
         </header>
 
         <main>
+          <span>Enter a sentence below:</span>
             <section class="form">
               <form onsubmit="return Client.handleSubmit(event)">
                 <input id="sentence" type="text" name="input" value="" placeholder="Enter sentence">
@@ -24,7 +22,7 @@
               </form>
             </section>
 
-            <section>
+            <section class="results">
                 <strong>Form Results:</strong>
                 <div id="polarity"></div>
                 <div id="agreement"></div>
