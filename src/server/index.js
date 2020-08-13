@@ -22,7 +22,7 @@ app.options('/', function (req, res) {
   res.end();
 });
 
-app.use(express.static(__dirname + '/public'))
+app.use(express.static("dist"));
 
 console.log(__dirname)
 
@@ -40,10 +40,6 @@ app.get('/', function (req, res) {
   res.send('dist/index.html')
 })
 
-// app.get('/test', function (req, res) {
-//     res.send(mockAPIResponse)
-// })
-
 const https = require('follow-redirects').https;
 
 app.post('/add', (req,res) => {
@@ -51,7 +47,7 @@ app.post('/add', (req,res) => {
   const options = {
    'method': 'POST',
    'hostname': 'api.meaningcloud.com',
-   'path': `/sentiment-2.1?key=6928a481ca2ebba380f76438e0bc9948&lang=en&txt=${newData}`,
+   'path': `/sentiment-2.1?key=${process.env.API_KEY}&lang=en&txt=${newData}`,
    'headers': {
    },
    'maxRedirects': 20
